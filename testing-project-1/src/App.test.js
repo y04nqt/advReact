@@ -5,5 +5,6 @@ import App from './App';
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
+  expect(div.innerHTML).toContain('Hello, Universe!');
   ReactDOM.unmountComponentAtNode(div);
 });
